@@ -1,0 +1,46 @@
+﻿@model Pedidos_ItensModel
+
+@{
+    ViewData["Title"] = "Cadastro";
+}
+
+<div class="text-center">
+    <h1 class="display-4">
+        Faça um novo pedido
+    </h1>
+</div>
+
+@{
+    ViewData["Title"] = "Editar fornecedor";
+}
+
+<div class="text-center">
+    <h1 class="display-4">
+        Editar fornecedor
+    </h1>
+</div>
+
+<form asp-controller="Request" asp-action="PedidoItens" method="post">
+    <div class="form-group">
+        <label for="pedidos_id">pedidos_id</label>
+        <input type="text" asp-for="pedidos_id" class="form-control" placeholder="Digite o id do pedido">
+    </div>
+
+    <div class="form-group">
+        <label for="produtos_id">produtos_id</label>
+        <input type="text" asp-for="produtos_id" class="form-control" placeholder="Digite o id do produto">
+    </div>
+
+    <div class="form-group">
+        <label for="quantidade">quantidade</label>
+        <input type="text" asp-for="quantidade" class="form-control" placeholder="Digite a quantidade">
+    </div>
+
+    <div class="form-group">
+        <label for="valor">valors</label>
+        <input type="text" asp-for="valor" class="form-control" placeholder="Digite o valor">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Confirmar</button>
+    <a class="btn btn-secondary" asp-controller="Home" asp-action="Index" role="button">Voltar</a>
+</form>

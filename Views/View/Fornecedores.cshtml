@@ -1,0 +1,36 @@
+﻿@model List<FornecedoresModel>
+
+@{
+    ViewData["Title"] = "Lista de fornecedores";
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">razao_social</th>
+            <th scope="col">cnpj</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            foreach(FornecedoresModel fornecedor in Model)
+            {
+                <tr>
+                    <th scope="row">@fornecedor.Id</th>
+                    <td>@fornecedor.razao_social</td>
+                    <td>@fornecedor.cnpj</td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <a role="button" class="btn btn-primary" asp-route-id="@fornecedor.Id" asp-controller="Update" asp-action="EditarFornecedor">Editar</a>
+                            <a role="button" class="btn btn-danger" asp-route-id="@fornecedor.Id" asp-controller="Delete" asp-action="Fornecedor">Deletar</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

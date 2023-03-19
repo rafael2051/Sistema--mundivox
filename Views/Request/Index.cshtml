@@ -1,0 +1,36 @@
+﻿@model PedidosModel
+
+@{
+    ViewData["Title"] = "Cadastro";
+}
+
+<div class="text-center">
+    <h1 class="display-4">
+        Faça um novo pedido
+    </h1>
+</div>
+
+@{
+    ViewData["Title"] = "Editar fornecedor";
+}
+
+<div class="text-center">
+    <h1 class="display-4">
+        Editar fornecedor
+    </h1>
+</div>
+
+<form asp-controller="Request" asp-action="Pedido" method="post">
+    <div class="form-group">
+        <label for="data">Data</label>
+        <input type="text" asp-for="data" class="form-control" placeholder="Digite a data do pedido">
+    </div>
+
+    <div class="form-group">
+        <label for="cnpj">Cnpj</label>
+        <input type="text" asp-for="fornecedores_id" class="form-control" placeholder="Digite o id do fornecedor">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Confirmar</button>
+    <a class="btn btn-secondary" asp-controller="Home" asp-action="Index" role="button">Voltar</a>
+</form>
