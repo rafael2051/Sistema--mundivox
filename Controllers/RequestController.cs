@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Sistema__mundivox.Models;
-using Sistema__mundivox.Repositório;
+using Sistema__mundivox.Repositorio;
 
 namespace Sistema__mundivox.Controllers
 {
@@ -9,8 +9,7 @@ namespace Sistema__mundivox.Controllers
         private readonly IPedidosRepositorio _pedidosRepositorio;
         private readonly IPedidosItensRepositorio _pedidosItensRepositorio;
 
-        public RequestController(IPedidosRepositorio pedidosRepositorio,
-                                IPedidosItensRepositorio pedidosItensRepositorio)
+        public RequestController(IPedidosRepositorio pedidosRepositorio, IPedidosItensRepositorio pedidosItensRepositorio)
         {
             _pedidosRepositorio = pedidosRepositorio;
             _pedidosItensRepositorio = pedidosItensRepositorio;

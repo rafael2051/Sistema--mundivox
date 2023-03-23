@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Sistema__mundivox.Data;
-using Sistema__mundivox.Repositório;
+using Sistema__mundivox.Repositorio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +28,8 @@ namespace Sistema__mundivox
 
             builder.Services.AddScoped<IFornecedoresRepositorio, FornecedoresRepositorio>();
             builder.Services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
+            builder.Services.AddScoped<IPedidosRepositorio, PedidosRepositorio>();
+            builder.Services.AddScoped<IPedidosItensRepositorio, PedidosItensRepositorio>();
 
 
             var app = builder.Build();

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Sistema__mundivox.Models;
-using Sistema__mundivox.Repositório;
+using Sistema__mundivox.Repositorio;
 
 namespace Sistema__mundivox.Controllers
 {

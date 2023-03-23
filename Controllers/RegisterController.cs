@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Sistema__mundivox.Models;
-using Sistema__mundivox.Repositório;
+using Sistema__mundivox.Repositorio;
 
 namespace Sistema__mundivox.Controllers
 {
@@ -12,7 +12,7 @@ namespace Sistema__mundivox.Controllers
                                  IProdutoRepositorio produtoRepositorio)
         {
             _fornecedorRepositorio = fornecedorRepositorio;
-            _produtoRepositorio = produtoRepositorio;   
+            _produtoRepositorio = produtoRepositorio;
         }
 
         public IActionResult Index()
@@ -31,7 +31,7 @@ namespace Sistema__mundivox.Controllers
         }
 
         [HttpPost]
-        public IActionResult Criar(FornecedoresModel Fornecedor) 
+        public IActionResult Criar(FornecedoresModel Fornecedor)
         {
             _fornecedorRepositorio.Adicionar(Fornecedor);
             return RedirectToAction("Index");
